@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
@@ -19,7 +19,7 @@ const eventLabels = {
   salida: "Salida",
 };
 
-export default function Control() {
+function Control() {
   const supabase = createClient();
   const searchParams = useSearchParams();
 
@@ -752,3 +752,10 @@ export default function Control() {
     </main>
   );
             }
+export default function ControlPage() {
+  return (
+    <Suspense fallback={<div style={{ padding: 40 }}>Cargando...</div>}>
+      <Control />
+    </Suspense>
+  );
+}
