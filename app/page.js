@@ -14,7 +14,9 @@ export default async function AdoptionPage() {
       <div className="adoption-glow adoption-glow-one" />
       <div className="adoption-glow adoption-glow-two" />
       <section className="adoption-content">
-  <Link href="/" className="adoption-back">← Volver al inicio</Link>
+  <Link href="/control" className="adoption-back">
+  ← Volver al inicio
+</Link>
         <header className="adoption-header">
           <span className="welcome-kicker">ADOPCIÓN AFAD</span>
           <h1>Encuentra a tu nuevo compañero 🐾</h1>
